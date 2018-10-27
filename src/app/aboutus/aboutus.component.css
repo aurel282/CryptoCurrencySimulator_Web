@@ -1,0 +1,36 @@
+body {
+  margin:0;
+  padding:0;
+  min-height: calc(100vh - 115px );
+  width: 100%;
+  background-color: #ffaf66;
+  }
+  .AboutUsContent{
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .MyTeam{
+    text-align: -webkit-center;
+    width:100%;
+  }
+  .TeamMember{
+    text-align: center;
+    border-style: solid;
+    width: -webkit-fit-content;
+    background-color: #eea96a;
+  }
+
+  .title{
+    color: #000000;
+  }
+  .img-circle {
+    border-radius: 75px;
+    margin: 5px;
+}
+  .icon-social-network{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+  }
+

@@ -1,0 +1,14 @@
+body {
+    margin:0;
+    padding:0;
+    min-height: calc(100vh - 115px );
+    width: 100%;
+    background-color: #ffaf66;
+    
+    }
+.MyTxtContent{
+    padding:10px;
+    width: 100%;
+    background-color: #ffaf66;
+    text-align: center;
+    }

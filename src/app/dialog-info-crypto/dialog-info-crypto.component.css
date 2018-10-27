@@ -1,0 +1,19 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+   }
+ 
+   .MainpopupContent{
+     text-align: center;
+   }
+ 
+   .myPopupButton{
+     background-color: #e4791b;
+     color: #ffffff;
+   }
+ 
+   h1{
+     text-align: center;
+   }

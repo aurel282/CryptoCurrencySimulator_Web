@@ -1,0 +1,133 @@
+body,html {
+    margin:0;
+    padding:0;
+    height: calc(100vh - 115px );
+    width: 100%;
+    background-color: #ffaf66;
+    }  
+    .MyTable{
+      width: 100%;
+      background-color: #ffaf66;
+      border-top: 15px solid #ffaf66;
+    }
+  
+    h1{
+      text-align: center;
+      color: #000000;
+      background-color: #ffaf66;
+    }
+  
+    p{
+      text-align: center;
+      background-color: #ffaf66;
+      border-bottom: 15px solid #ffaf66;
+    }
+    
+
+  
+  .MyButton{
+    text-align: center;
+    padding-bottom: 15px;
+    background-color: #ffaf66;
+    margin-bottom: 15px;
+  }
+  .SimulateButton{
+    text-align: center;
+    color: #ffffff;
+    background-color: #e4791b;
+  }
+  .FlatCurInput{
+   width: 65px;
+   background-color: #ffaf66;
+  }
+  .DateInput{
+    width: 120px;
+   }
+  .input-group{
+    width: 150px;
+    text-align: center;
+  }
+  .myList-Container{
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  .myList-Container-Trader{
+    height: 450px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  .list-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+  .myTable-Container{
+    align-self: center;
+  }
+
+  .myTable-Exchange{
+    align-self: center;
+    width: 90%;
+
+  }
+
+  .myTable-Trader{
+    align-self: center;
+    width: 90%;
+  }
+  .myList{
+    width: 100%;
+    text-align: center;
+    height: 300px;
+  }
+  .myList-Element{
+    cursor: pointer;
+  }
+
+  .DisplayPic{
+    width: 20%; 
+  }
+
+  .EchangeChoose{
+    width: 100%;
+    text-align: -webkit-center;
+  }
+
+  .EchangeInput{
+    width: 250px;
+    max-height: 500px;
+  }
+  .form-control{
+   margin-bottom: 15px;
+  }
+
+  .MyButton{
+    text-align: center;
+    background-color: #ffaf66;
+    padding-top: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+  }
+  .ViewButton{
+    text-align: center;
+    color: #ffffff;
+    background-color: #e4791b;
+    padding-top: 5px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
+    margin-right: 5px;
+  }

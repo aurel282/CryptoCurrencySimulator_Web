@@ -1,0 +1,25 @@
+<p>
+  <!--
+
+    this._isTrading = isTrading;
+    this._algorithm = algorithm;
+    this._prooftype = prooftype;
+    this._fullypremined = fullypremined;
+    this._totalCoinsupply = totalCoinsupply;
+    this._sortOrder = sortOrder;
+  -->
+  CoinName : {{actCrypto.name}}
+  <br>
+  Symbol : {{actCrypto.symbol}}
+  <br>
+  <img class="DisplayPic" [src]="actCrypto.picture" (click)="openInfo()">
+  <br>
+  FullName : {{actCrypto.fullName}}
+  <br>
+  Is coin Traded : {{actCrypto.isTrading}}
+  <br>
+  Algorithm Used : {{actCrypto.algorithm}}
+  <br>
+  Total coin supply : {{actCrypto.totalCoinsupply}}
+  <br>
+</p>

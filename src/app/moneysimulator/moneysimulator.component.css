@@ -1,0 +1,58 @@
+body,html {
+  margin:0;
+  padding:0;
+  height: calc(100vh - 115px );
+  width: 100%;
+  background-color: #ffaf66;
+  }
+
+  .BigPicRow{
+    width: 100%;
+  }
+  .BigPicColumn{
+    width: 33%;
+    text-align: center;
+  }
+  .BigPic{
+    cursor: pointer;
+    max-height: 33% ;
+    max-width: 33% ;
+  }
+
+  .MyTable{
+    width: 100%;
+    background-color: #ffaf66;
+    border-top: 15px solid #ffaf66;
+  }
+
+  h2{
+    text-align: center;
+    color: #ffffff;
+    background-color: #ffaf66;
+  }
+
+  p{
+    text-align: center;
+    background-color: #ffaf66;
+    border-bottom: 15px solid #ffaf66;
+  }
+
+
+.MyButton{
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: #ffaf66;
+  margin-bottom: 15px;
+}
+.SimulateButton{
+  text-align: center;
+  color: #ffffff;
+  background-color: #e4791b;
+}
+.FlatCurInput{
+ width: 65px;
+ background-color: #ffaf66;
+}
+.DateInput{
+  width: 120px;
+ }

@@ -1,0 +1,35 @@
+body {
+  margin:0;
+  padding:0;
+  size: 45px;
+}
+nav.navbar.navbar-inverse{
+  margin:0;
+  padding:0;
+}
+
+h1{
+  background-color: #303030;
+  margin: 0;
+  font-size: 45px;
+  text-align: center;
+  color: #ffffff;
+}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.navbar-toggler {
+  padding: .25rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}

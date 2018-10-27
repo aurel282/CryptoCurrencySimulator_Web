@@ -1,0 +1,98 @@
+<body>
+  <h1><strong>Realtime Transaction</strong></h1>
+  <div  *ngIf="dataLoad;else other_content">
+    <div class="EchangeChoose">
+      <div class="EchangeInput">
+      
+        <ngx-select-dropdown [config]="configfsym" [options]="MyCrypto" 
+        [(value)]="fsym" [multiple]="false" class="CryptoList" ></ngx-select-dropdown>
+
+        <br>
+
+        <ngx-select-dropdown [config]="configtsym" [options]="tsymList" 
+        [(value)]="tsym" [multiple]="false" ></ngx-select-dropdown>
+
+        <div class="MyButton">
+          <button mat-raised-button (click)="UpdateRealTimeDataSource()" class="SimulateButton">Get RealTime Data</button>
+        </div>
+      </div>
+    </div>
+    <div class="myList-Container mat-elevation-z8"> 
+      <div class="myTable-Exchange">
+        <mat-table #table [dataSource]="dataSourceTrade" class="myList">
+
+          <ng-container matColumnDef="Exchange">
+            <mat-header-cell *matHeaderCellDef> Exchange </mat-header-cell>
+            <mat-cell *matCellDef="let trade" class="myList-Element"> {{trade.exchangeName}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Price">
+            <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+            <mat-cell *matCellDef="let trade" class="myList-Element"> {{trade.price}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Quantity">
+            <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+            <mat-cell *matCellDef="let trade" class="myList-Element"> {{trade.quantity}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Total">
+            <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+            <mat-cell *matCellDef="let trade" class="myList-Element"> {{trade.total}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayTradeColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayTradeColumns;"></mat-row>
+        </mat-table>
+      </div>
+    </div>
+
+    <div class="myList-Container-Trader mat-elevation-z8">
+      <div class="list-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+      <div class="myTable-Trader">
+        <mat-table #table [dataSource]="dataSource" class="myList">
+
+          <!-- Position Column -->
+          <ng-container matColumnDef="Display">
+            <mat-header-cell *matHeaderCellDef> Displayed </mat-header-cell>
+            <mat-cell *matCellDef="let exchange" class="myList-Element"> 
+              <mat-checkbox [(ngModel)]="exchange.displayed" (click)="diplayedChange(exchange.name,exchange.displayed)"></mat-checkbox>
+            </mat-cell>
+          </ng-container>
+
+
+          <ng-container matColumnDef="Name">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let exchange" class="myList-Element"> {{exchange.name}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Price">
+            <mat-header-cell *matHeaderCellDef> Price in {{tsym[0].value}} </mat-header-cell>
+            <mat-cell *matCellDef="let exchange" class="myList-Element"> {{exchange.price}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="Compare">
+            <mat-header-cell *matHeaderCellDef> Compare </mat-header-cell>
+            <mat-cell *matCellDef="let exchange" class="myList-Element"> {{exchange.delta}} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+      <div class="MyButton">
+        <button mat-raised-button (click)="SelectAllTrade()" class="ViewButton">Select All</button>
+        <button mat-raised-button (click)="UnSelectAllTrade()" class="ViewButton">Unselect All</button>
+        <button mat-raised-button (click)="Display()" class="ViewButton">Display</button>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+  </div>
+  <ng-template #other_content>other content here...</ng-template>
+</body>

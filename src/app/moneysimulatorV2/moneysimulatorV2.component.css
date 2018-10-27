@@ -1,0 +1,108 @@
+body,html {
+  margin:0;
+  padding:0;
+  height: calc(100vh - 115px );
+  width: 100%;
+  background-color: #ffaf66;
+  }
+
+  .BigPicRow{
+    width: 100%;
+  }
+  .BigPicColumn{
+    height: 20%;
+    text-align: center;
+  }
+  .BigPic{
+    cursor: pointer;
+    max-width: 50%;
+    margin-top: 10px;
+  }
+  .SmallPicRow{
+    width: 100%;
+  }
+  .SmallPicColumn{
+    height: 10%;
+    text-align: center;
+  }
+  .SmallPic{
+    cursor: pointer;
+    max-width: 50%;
+    margin-top: 10px;
+  }
+
+  .MyTable{
+    width: 100%;
+    background-color: #ffaf66;
+    border-top: 15px solid #ffaf66;
+  }
+
+  h2{
+    text-align: center;
+    color: #ffffff;
+    background-color: #ffaf66;
+  }
+
+  p{
+    text-align: center;
+    background-color: #ffaf66;
+    border-bottom: 15px solid #ffaf66;
+  }
+
+
+.MyButton{
+  text-align: center;
+  padding-bottom: 15px;
+  background-color: #ffaf66;
+  margin-bottom: 15px;
+}
+.SimulateButton{
+  text-align: center;
+  color: #ffffff;
+  background-color: #e4791b;
+}
+.FlatCurInput{
+ width: 65px;
+ background-color: #ffaf66;
+}
+.DateInput{
+  width: 120px;
+ }
+.input-group{
+  width: 150px;
+  text-align: center;
+}
+.myList-Container{
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+.list-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+}
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.myTable-Container{
+  align-self: center;
+}
+.myList{
+  width: 250px;
+  text-align: center;
+  max-height: 225px;
+}
+.myList-Element{
+  cursor: pointer;
+}
+.Simulation-Area{
+  text-align: center;
+}
+.DisplayPic{
+  width: 20%; 
+}
+

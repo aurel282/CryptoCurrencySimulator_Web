@@ -1,0 +1,33 @@
+
+<h1> Your Simulation</h1>
+  <div class="MainpopupContent">
+    <br>
+    <div *ngIf="data.StartValue != 0 && data.EndValue != 0">
+      <p>Your currency {{data.Currency.viewValue}}</p>
+      <br>
+      <p>Your simulation is in {{data.CryptoCurreny._symbol}}</p>
+      <br>
+        <div *ngIf="data.Difference > 0">
+            <p>If you had put {{data.Amount}}{{data.Currency.viewValue}} the {{data.StartDate | date: 'dd/MM/yyyy'}}</p>
+            <br>
+            <p>You would have had {{data.EndAmount}}{{data.Currency.viewValue}} the {{data.EndDate | date: 'dd/MM/yyyy'}}</p>
+            <br>
+            You Would have won {{data.Difference}} {{data.Currency.viewValue}}
+        </div>
+        <div *ngIf="data.Difference < 0">
+            <p>If you had put {{data.Amount}}{{data.Currency.viewValue}} the {{data.StartDate | date: 'dd/MM/yyyy'}}</p>
+            <br>
+            <p>You would have had {{data.EndAmount}}{{data.Currency.viewValue}} the {{data.EndDate | date: 'dd/MM/yyyy'}}</p>
+            <br>
+            You Would have lost {{data.Difference}} {{data.Currency.viewValue}}
+        </div>
+        <div *ngIf="data.Difference == 0">
+            There is no difference in this period.
+        </div>
+    </div>
+    <div *ngIf="data.StartValue == 0 || data.EndValue == 0">
+      There is a mistake in your input or no data available for the data set!
+    </div>
+    <br>
+    <button mat-raised-button class="myPopupButton" (click)="onNoClick()" >Thanks For the Simulation!</button>
+  </div>

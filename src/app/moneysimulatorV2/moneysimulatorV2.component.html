@@ -1,0 +1,112 @@
+<body>
+<div  *ngIf="dataLoad;else other_content">
+  <div>
+      <table class="MyTable">
+          <tr class="BigPicRow" >  
+              <th *ngFor="let i of FavFirstRow" class="BigPicColumn" [style.width.px]="100/FavFirstRowLength">
+                <img class="BigPic" [src]="MyCrypto[i].picture" (click)="ClickPic(MyCrypto[i].id)">             
+              </th> 
+          </tr>
+          <tr class="BigPicRow">
+              <th *ngFor="let i of FavSecondRow" class="BigPicColumn" [style.width.px]="100/FavSecondRowLength">
+                <img class="BigPic" [src]="MyCrypto[i].picture" (click)="ClickPic(MyCrypto[i].id)" >             
+              </th> </tr>
+      </table>
+  </div>
+  <div>
+      <table class="MyTable">
+          <tr class="SmallPicRow" >  
+              <th *ngFor="let i of OtherFirstRow" class="SmallPicColumn" [style.width.px]="100/OtherFirstRowLength">
+                <img class="SmallPic" [src]="MyCrypto[i].picture" (click)="ClickPic(MyCrypto[i].id)">             
+              </th> 
+          </tr>
+          <tr class="SmallPicRow">
+              <th *ngFor="let i of OtherSecondRow" class="SmallPicColumn" [style.width.px]="100/OtherSecondRowLength">
+                <img class="SmallPic" [src]="MyCrypto[i].picture" (click)="ClickPic(MyCrypto[i].id)" >             
+              </th> </tr>
+      </table>
+  </div>
+
+
+
+  <div class="myList-Container mat-elevation-z8">
+      <div class="list-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+      </div>
+    <div class="myTable-Container">
+      <mat-table #table [dataSource]="dataSource" class="myList">
+    
+        <!-- Position Column -->
+        <ng-container matColumnDef="Symbol">
+          <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
+          <mat-cell *matCellDef="let crypto" (click)="ClickPic(crypto.id)" class="myList-Element"> {{crypto.symbol}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="CoinName">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let crypto" (click)="ClickPic(crypto.id)" class="myList-Element"> {{crypto.coinName}} </mat-cell>
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+
+  <br>
+
+  <br>
+
+  <div id="Simulation" class="Simulation-Area">
+    <h2>
+      {{ActCrypto._name}} Simulation
+    </h2>
+    <img class="DisplayPic" [src]="ActCrypto.picture" (click)="openInfo()"> 
+    <p>
+
+      <mat-form-field class="DateInput">
+        <input id="StartDate" [(ngModel)]="ChoosenStartDate" matInput [min]="minDate" [max]="maxDate"
+        [matDatepicker]="Startpicker" placeholder="Start Date">
+        <mat-datepicker-toggle matSuffix [for]="Startpicker"></mat-datepicker-toggle>
+        <mat-datepicker #Startpicker></mat-datepicker>
+      </mat-form-field>
+
+
+      <mat-form-field class="DateInput">
+        <input id="EndDate" matInput [(ngModel)]="ChoosenEndDate" [min]="minDate" [max]="maxDate"
+        [matDatepicker]="Endpicker" placeholder="End Date">
+        <mat-datepicker-toggle matSuffix [for]="Endpicker"></mat-datepicker-toggle>
+        <mat-datepicker #Endpicker></mat-datepicker>
+      </mat-form-field>
+
+      <br/>
+
+      <mat-form-field class="FlatCurInput">
+          <input matInput placeholder="Amount" [(ngModel)]="Amount">
+      </mat-form-field>
+
+
+      <mat-form-field class="FlatCurInput">
+        <mat-select placeholder="Currency" [(ngModel)]="actCurrency">
+            <mat-option *ngFor="let currency of fiatCurrency" [value]="currency.value">
+              {{ currency.viewValue }}
+            </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <br>
+    <div class="MyButton">
+      <button mat-raised-button (click)="CryptoSimulation()" class="SimulateButton">Simulate!</button>
+    </div>
+</div>
+
+</div>
+
+<ng-template #other_content>other content here...</ng-template>
+
+</body>
+
+
