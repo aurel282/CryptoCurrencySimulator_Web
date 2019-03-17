@@ -17,6 +17,7 @@ body,html {
     cursor: pointer;
     max-width: 50%;
     margin-top: 10px;
+    
   }
   .SmallPicRow{
     width: 100%;
@@ -29,6 +30,8 @@ body,html {
     cursor: pointer;
     max-width: 50%;
     margin-top: 10px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .MyTable{
@@ -95,6 +98,8 @@ body,html {
   width: 250px;
   text-align: center;
   max-height: 225px;
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .myList-Element{
   cursor: pointer;
@@ -104,5 +109,7 @@ body,html {
 }
 .DisplayPic{
   width: 20%; 
+  border-radius: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
